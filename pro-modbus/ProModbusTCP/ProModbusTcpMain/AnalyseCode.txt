@@ -1,0 +1,72 @@
+解析结果：
+
+1
+txtShowMess->append("线圈读取成功！");
+
+2
+txtShowMess->append("寄存器读取成功！");
+
+3
+txtShowMess->append("线圈数据写入成功！");
+
+4
+txtShowMess->append("寄存器数据写入成功！");
+
+-1
+txtShowMess->append("↑未发送请求就接收到了消息！此消息不予解析！");
+
+-2
+txtShowMess->append("↑ 接收到的报文长度不正常！请重新发送请求！");
+
+-3
+txtShowMess->append("↑ 接收到的报文请求序列号不一致！请重新发送请求!");
+
+-4
+txtShowMess->append("↑ 接收到的报文协议标识有误！请重新发送请求!");
+
+-5
+txtShowMess->append("↑ 接收到的报文报头其后字节数不正确！请重新发送请求！");
+
+-6
+txtShowMess->append("↑ 响应此请求的从站不正确！请重新发送请求！");
+
+-7
+txtShowMess->append("↑ 无法被识别的功能码！请重新发送请求！");
+
+-8
+txtShowMess->append("↑ 请求异常！异常码为：1");
+
+-9
+txtShowMess->append("↑ 请求异常！异常码为：" + QString::number(array.at(8)));
+
+-10
+txtShowMess->append("↑ 请求异常，且异常报文长度不正确！");
+
+-11
+txtShowMess->append("↑ 响应报文的功能码与请求不一致！请重新发送请求！");
+
+-12 (0x01 / 0x03)
+txtShowMess->append("↑ 响应报文的字节数不正常或不完整！请重新发送请求！");
+
+-13 (0x01 / 0x03)
+txtShowMess->append("↑ 响应报文的数据字节数与请求无法对应！请重新发送请求！");
+
+-14 (0x01 / 0x03)
+txtShowMess->append("↑ 响应报文的数据字节数不正确！请重新发送请求！");
+
+-15 (0x01 / 0x03)
+txtShowMess->append("↑ 响应报文的其后字节数不正确！请重新发送请求！");
+
+
+-16 (0x0f / 0x10)
+ txtShowMess->append("↑ 响应报文解析与预期响应不一致（请求地址与响应地址不一致）！");
+
+-17 (0x0f / 0x10)
+txtShowMess->append("↑ 响应报文解析与预期响应不一致（请求数量与响应数量不一致）！");
+
+-18 (0x0f / 0x10)
+txtShowMess->append("↑ 响应报文的其后字节数不正确！请重新发送请求！");
+
+-19 (0x0f / 0x10)
+txtShowMess->append("↑ 响应报文长度不完整或不正确！请重新发送请求！");
+
